@@ -33,7 +33,10 @@
               <div class="box-header with-border">
                 <h3 class="box-title">Dashboard Petugas</h3>
               </div>
-
+              <div class="box-body">
+                <h1>Login berhasil !</h1>
+                <h2>Hai, <?php echo $this->session->userdata("nama"); ?></h2>
+              </div>
               
               <!-- /.box-body -->
             </div>

@@ -20,6 +20,6 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('landing');
+		$this->load->view('admin/dashboard/petugas/login_petugas');
 	}
 }
