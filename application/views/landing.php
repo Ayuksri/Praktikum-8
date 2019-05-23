@@ -30,7 +30,7 @@
                 </h2>
                 <br>
                 <div>
-                  <a href="<?php echo base_url('/Perpustakaan/petugas'); ?>"  >Staff</a> <br><br>
+                  <a href="<?php echo base_url('/Perpustakaan/login'); ?>">Staff</a> <br><br>
                   <a href="<?php echo base_url('/Perpustakaan/anggota'); ?>">Anggota</a>
                 </div>
               </div>

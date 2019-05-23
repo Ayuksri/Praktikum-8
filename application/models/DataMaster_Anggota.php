@@ -1,6 +1,5 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
 class DataMaster_Anggota extends CI_Model {
 
 	public function list_all() {

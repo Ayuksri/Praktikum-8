@@ -3,7 +3,6 @@
 <?php $this->load->view('admin/layout/head') ?>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
-
   <?php $this->load->view('admin/layout/header') ?>
   <!-- Left side column. contains the logo and sidebar -->
   <?php $this->load->view('admin/layout/sidebar') ?>
@@ -44,7 +43,6 @@
                 </div><!-- /.box-header -->
                 <div class="box-body">
                   <table id="dataBuku" class="table table-bordered table-hover">
-
                     <thead>
                       <tr>
                         <th>No</th>
@@ -201,7 +199,6 @@
             $('input+small').text('');
             $('input').parent().removeClass('has-error');
             $('select').parent().removeClass('has-error');
-
             $('#myModal').modal('show');
             //console.log('test');
             return false;

@@ -222,43 +222,32 @@
 
     <script>
       $(function () {
-
-        $('#dataAnggota').DataTable({"pageLength": 10});
-
-         $('#tambahBuku').click(function(){
-            $('input+small').text('');
-            $('input').parent().removeClass('has-error');
-            $('select').parent().removeClass('has-error');
-
-            $('#myModal').modal('show');
-            //console.log('test');
-            return false;
+          $('#dataAnggota').DataTable({"pageLength": 10});
+          $('#tambahBuku').click(function(){
+          $('input+small').text('');
+          $('input').parent().removeClass('has-error');
+          $('select').parent().removeClass('has-error');
+          $('#myModal').modal('show');
+          return false;
         });
-
           $('.editbuku').click(function(){
-            $('input+small').text('');
-            $('input').parent().removeClass('has-error');
-            $('select').parent().removeClass('has-error');
+          $('input+small').text('');
+          $('input').parent().removeClass('has-error');
+          $('select').parent().removeClass('has-error');
+          $('#myModal2').modal('show');
 
-            $('#myModal2').modal('show');
+          var form = "#myModal2";
 
-            var form = "#myModal2";
-
-            $(form).find('input[name="id"]').val($(this).attr('data-id_anggota'));
-            $(form).find('input[name="nama"]').val($(this).attr('data-nama'));
-            $(form).find('input[name="prodi"]').val($(this).attr('data-prodi'));
-            $(form).find('input[name="jenjang"]').val($(this).attr('data-jenjang'));
-            $(form).find('textarea[name="alamat"]').val($(this).attr('data-alamat'));
-
-            insert = $(form).find('#formEditKelas').attr('action')+"/"+$(this).attr('data-id_kursi');
-            $(form).find('#formEditKelas').attr('action',insert);
-            //console.log('test');
-
-            return false;
+          $(form).find('input[name="id"]').val($(this).attr('data-id_anggota'));
+          $(form).find('input[name="nama"]').val($(this).attr('data-nama'));
+          $(form).find('input[name="prodi"]').val($(this).attr('data-prodi'));
+          $(form).find('input[name="jenjang"]').val($(this).attr('data-jenjang'));
+          $(form).find('textarea[name="alamat"]').val($(this).attr('data-alamat'));
+          insert = $(form).find('#formEditKelas').attr('action')+"/"+$(this).attr('data-id_kursi');
+          $(form).find('#formEditKelas').attr('action',insert);
+          return false;
         });
-
       });
-
     </script>
 
 @endsection

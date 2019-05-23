@@ -45,7 +45,6 @@
                 </div><!-- /.box-header -->
                 <div class="box-body">
                   <table id="dataBuku" class="table table-bordered table-hover">
-
                     <thead>
                       <tr>
                         <th>No</th>
@@ -226,14 +225,11 @@
       $(function () {
 
         $('#dataBuku').DataTable({"pageLength": 10});
-
          $('#tambahBuku').click(function(){
             $('input+small').text('');
             $('input').parent().removeClass('has-error');
             $('select').parent().removeClass('has-error');
-
             $('#myModal').modal('show');
-            //console.log('test');
             return false;
         });
 
@@ -241,26 +237,18 @@
             $('input+small').text('');
             $('input').parent().removeClass('has-error');
             $('select').parent().removeClass('has-error');
-
             $('#myModal2').modal('show');
-
             var form = "#myModal2";
-
             $(form).find('input[name="id"]').val($(this).attr('data-id_buku'));
             $(form).find('input[name="judul"]').val($(this).attr('data-judul'));
             $(form).find('input[name="penerbit"]').val($(this).attr('data-penerbit'));
             $(form).find('input[name="pengarang"]').val($(this).attr('data-pengarang'));
             $(form).find('input[name="tahun"]').val($(this).attr('data-tahun'));
-
             insert = $(form).find('#formEditKelas').attr('action')+"/"+$(this).attr('data-id_kursi');
             $(form).find('#formEditKelas').attr('action',insert);
-            //console.log('test');
-
             return false;
         });
-
       });
-
     </script>
 
 @endsection

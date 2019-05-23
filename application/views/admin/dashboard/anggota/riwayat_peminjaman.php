@@ -43,6 +43,8 @@
                   </h3>
                 </div><!-- /.box-header -->
                 <div class="box-body">
+                  <input type="text" style="float:right" id="inputt" onkeyup="myFunction()" placeholder="Search" title="Type in a name">
+                <div class="box-body">
                   <table id="dataBuku" class="table table-bordered table-hover">
 
                     <thead>
@@ -57,7 +59,7 @@
                     </thead>
                     <tbody>
                      <?php
-                     $i = 1;
+                     $i = $this->uri->segment('3') + 1;
                      foreach ($peminjam as $item){  ?>
                       <tr>
                         <td><?=$i++;?></td>
@@ -111,10 +113,28 @@
     <script src="<?=base_url('assets/admin/plugins')?>/datatables/dataTables.bootstrap.min.js"></script>
 
     <script>
-      $(function () {
-        $('#dataBuku').DataTable({"pageLength": 10});
-      });
-
+      // $(function () {
+      //   $('#dataBuku').DataTable({"pageLength": 10});
+      // });
+      function myFunction() {
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("inputt");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("databuku");
+      tr = table.getElementsByTagName("tr");
+      //alert(tr.length);
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[1];
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    }
     </script>
 
 @endsection

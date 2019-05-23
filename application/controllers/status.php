@@ -1,6 +1,5 @@
-<?php 
-	defined('BASEPATH') OR exit('No direct script access allowed');
-	class C_Petugas extends CI_controller{
+<?php
+	class Status extends CI_controller{
 		function __construct(){
 			parent :: __construct();
 

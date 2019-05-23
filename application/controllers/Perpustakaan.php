@@ -23,6 +23,10 @@ class Perpustakaan extends CI_Controller {
 	{
 		$this->load->view('admin/dashboard/anggota/index');
 	}
+	public function login()
+	{
+		$this->load->view('admin/dashboard/petugas/login');
+	}
 	public function index()
 	{
 		redirect( base_url() );
@@ -54,7 +58,6 @@ class Perpustakaan extends CI_Controller {
 
 		$cek=$this->uri->segment('3');
 		//var_dump($cek);
-
 		switch ($cek) {
 			case 'buku':
 				if( $_SERVER['REQUEST_METHOD'] == 'POST') {

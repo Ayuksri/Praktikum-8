@@ -1,9 +1,8 @@
 <?php
-	defined('BASEPATH') OR exit('No direct script access allowed'); 
-	class Models_Login extends CI_model{
-		function cek_login($tabel, $where){
+	class Login_p extends CI_model{
+		function cek_data($tabel, $where){
 			$session = $this->db->get_where($tabel, $where)->row();
-			$this->session->set_userdata("id",$session->Kd_Petugas);
+			$this->session->set_userdata('id',$session->Kd_Petugas);
 			return $session;
 		}
 		function last_login(){
